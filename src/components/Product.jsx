@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import { useEffect} from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert'
@@ -29,9 +29,9 @@ const addToCart= (product)=>{
 dispatch(add(product))
 
 }
-  const cards = products.map(product =>(
-    <div className="col-md-3" style={{marginBottom: '10px'}}>
-      <Card key={product.id} className='h-100' style={{ width: '18rem' }}>
+  const cards = products.map(product => ( 
+  <div className="col-md-3" style={{marginBottom: '10px'}}>
+    <Card key={product.id} className='h-100' style={{ width: '18rem' }} >
         <div className='text-center'>
             <Card.Img variant="top" src={product.image} style={{ width:'100px', height:'130px'}} />
             </div>
